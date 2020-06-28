@@ -2,12 +2,11 @@
   (:use :cl)
   (:nicknames "anaphoric-macros")
   (:export
-   #:|#`-reader|
    #:alet
    #:alet%))
 
 (in-package :afp-lol-workshop.anaphoric-macros)
-  
+
 ;; Many of these code examples are from Let over Lambda Chapter 6
 ;; and On Lisp Ch. 14
 
@@ -15,7 +14,7 @@
 (defun some-long-calculation ()
   (loop :for i :from 1 :to 1000000000 :when i :sum :it))
 
-;; in real code we would assign this to a variable and 
+;; in real code we would assign this to a variable and
 ;;  (let ((result (some-long-calculation)))
 ;;    (foo result))
 
@@ -125,7 +124,7 @@ p  `(aif ,test-form
           (loop :for var :in vars
                 :collect (gensym (symbol-name var)))))
 
-;; this example leverages 
+;; this example leverages
 (let ((vars '(var-a var-b var-c)))
   (mapcar (serapeum:op `(,_ ,_))
           vars

@@ -1,10 +1,10 @@
 #|
-  This file is a part of afp-lol-workshop project.
-  Copyright (c) 2019 Atlanta Functional Programming
+This file is a part of afp-lol-workshop project.
+Copyright (c) 2019, 2020 Atlanta Functional Programming
 |#
 
 #|
-  Author: Atlanta Functional Programming
+Author: Atlanta Functional Programming
 |#
 
 (defsystem :afp-lol-workshop
@@ -14,14 +14,14 @@
   :depends-on (:alexandria :serapeum :cl-ppcre)
   :components ((:module "src"
                 :components
-		(
-		 (:file "readtables")
-		 (:file "macros-intro")
+                (
+                 (:file "readtables")
+                 (:file "macros-intro")
                  (:file "macros-intro-once-only")
                  (:file "reader-macros-examples")
                  (:file "programs-that-program")
                  (:file "anaphoric-macros")
-		 (:file "pandoric-macros")
+                 (:file "pandoric-macros")
                  (:file "afp-lol-workshop"))))
   :description "An overview of code from Let Over Lambda (plus a few extras)"
   :long-description
